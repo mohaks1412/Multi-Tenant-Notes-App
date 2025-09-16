@@ -1,0 +1,82 @@
+/* Upgrade.css */
+
+:root {
+  --background-color: #212529; /* Dark grey */
+  --card-bg: #2b3035;
+  --text-color: #f8f9fa; /* Light grey */
+  --primary-color: #20c997; /* Teal */
+  --secondary-color: #adb5bd; /* Muted grey */
+  --card-shadow: rgba(0, 0, 0, 0.5);
+  --box-bg: #3c4045;
+}
+
+.upgrade-page-container {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.upgrade-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 10px 20px var(--card-shadow);
+  padding: 2.5rem;
+  max-width: 550px;
+  width: 100%;
+  text-align: center;
+}
+
+.upgrade-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.upgrade-description {
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.upgrade-description strong {
+  color: var(--primary-color);
+}
+
+.pro-plan-box {
+  background-color: var(--box-bg);
+  border: 1px solid var(--secondary-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.pro-plan-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.pro-plan-features {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.pro-plan-price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-color);
+}
+
+.upgrade-note {
+  color: var(--secondary-color);
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+}

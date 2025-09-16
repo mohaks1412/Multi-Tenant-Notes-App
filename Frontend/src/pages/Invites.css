@@ -1,0 +1,80 @@
+/* Invites.css */
+
+:root {
+  --background-color: #212529;
+  --text-color: #f8f9fa;
+  --primary-color: #20c997;
+  --card-bg: #2b3035;
+  --empty-text-color: #adb5bd;
+}
+
+.invites-page-container {
+  min-height: 100vh;
+  padding: 2rem;
+  position: relative;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* -------------------- */
+/* --- Floating Action Button (FAB) --- */
+/* -------------------- */
+.fab {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 2rem;
+  background: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 999;
+}
+
+.fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* -------------------- */
+/* --- Invite Cards Grid --- */
+/* -------------------- */
+.invites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* -------------------- */
+/* --- Empty State Message --- */
+/* -------------------- */
+.empty-state-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  color: var(--empty-text-color);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .invites-page-container {
+    padding: 1rem;
+  }
+}

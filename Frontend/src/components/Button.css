@@ -1,0 +1,60 @@
+/* Button.css */
+
+:root {
+  --teal-color: #20c997;
+  --dark-grey-bg: #212529;
+  --button-text-color: #f8f9fa;
+  --teal-hover-color: #1a9e7d;
+}
+
+/* Optional container styling for layout */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.button {
+  /* Button size and shape */
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+
+  /* Color scheme */
+  background-color: var(--teal-color);
+  color: var(--dark-grey-bg);
+  
+  /* Transition for smooth effects */
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+
+  /* Remove default outline on focus */
+  outline: none;
+}
+
+.button:hover {
+  background-color: var(--teal-hover-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  background-color: #17896d;
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Optional styling for a 'ghost' button variant */
+.button.ghost {
+  background-color: transparent;
+  color: var(--teal-color);
+  border: 2px solid var(--teal-color);
+}
+
+.button.ghost:hover {
+  background-color: rgba(32, 201, 151, 0.1);
+  transform: translateY(-2px);
+}

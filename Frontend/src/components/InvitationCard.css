@@ -1,0 +1,94 @@
+/* InvitationCard.css */
+
+:root {
+  --card-bg: #2b3035;
+  --card-shadow: rgba(0, 0, 0, 0.4);
+  --text-color: #f8f9fa;
+  --primary-color: #20c997;
+  --status-pending-bg: #ffc107;
+  --status-pending-text: #212529;
+  --status-accepted-bg: #20c997;
+  --status-accepted-text: #212529;
+  --status-rejected-bg: #dc3545;
+  --status-rejected-text: #f8f9fa;
+  --secondary-button-bg: transparent;
+  --secondary-button-border: #adb5bd;
+}
+
+.invite-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--card-shadow);
+  padding: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.invite-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+.invite-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.invite-email {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.invite-status {
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px; /* Pill shape */
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.invite-status.pending {
+  background-color: var(--status-pending-bg);
+  color: var(--status-pending-text);
+}
+
+.invite-status.accepted {
+  background-color: var(--status-accepted-bg);
+  color: var(--status-accepted-text);
+}
+
+.invite-status.rejected {
+  background-color: var(--status-rejected-bg);
+  color: var(--status-rejected-text);
+}
+
+.status-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.invite-role,
+.invite-by {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  margin: 0.5rem 0;
+}
+
+.invite-role strong {
+  color: var(--primary-color);
+}
+
+.invite-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}

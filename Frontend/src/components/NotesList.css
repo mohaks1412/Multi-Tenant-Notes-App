@@ -1,0 +1,82 @@
+/* NotesList.css */
+
+:root {
+  --background-color: #212529;
+  --text-color: #f8f9fa;
+  --primary-color: #20c997;
+  --note-card-gap: 1.5rem;
+  --input-bg: #2b3035;
+  --input-border: #495057;
+}
+
+/* Top-level container for the notes page */
+.notes-page-container {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  padding: 2rem;
+}
+
+/* Search input styling */
+.notes-list-search {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  padding: 0.75rem 1rem;
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  color: var(--text-color);
+  font-size: 1rem;
+  display: block;
+}
+
+.notes-list-search::placeholder {
+  color: var(--input-border);
+}
+
+.notes-list-search:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.notes-list-container {
+  padding-top: 1rem;
+}
+
+/* -------------------- */
+/* --- The Notes Grid --- */
+/* -------------------- */
+.notes-grid {
+  display: grid;
+  gap: var(--note-card-gap);
+  
+  /* Default flexible grid layout for most screens */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+/* For laptops: 5 cards per row */
+@media (min-width: 1400px) {
+  .notes-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* For tablets and smaller laptops: 3 cards per row */
+@media (min-width: 769px) and (max-width: 1399px) {
+  .notes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* For mobile phones: 1 card per row */
+@media (max-width: 768px) {
+  .notes-page-container {
+    padding: 1rem;
+  }
+  .notes-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

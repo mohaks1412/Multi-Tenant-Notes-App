@@ -1,0 +1,70 @@
+/* NotesCard.css */
+
+:root {
+  --card-bg: #2b3035;
+  --card-shadow: rgba(0, 0, 0, 0.4);
+  --title-color: #20c997;
+  --author-color: #f8f9fa;
+  --delete-icon-color: #dc3545; /* Red for delete icon */
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.note-card {
+  /* 20:9 Aspect Ratio */
+  aspect-ratio: 20 / 9;
+  width: 250px; 
+  
+  /* Card Styling */
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--card-shadow);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  /* Text layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Hover Effect */
+.note-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+.note-card h2 {
+  color: var(--title-color);
+  font-size: 1.5rem;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.note-card h4 {
+  color: var(--author-color);
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* Delete Icon */
+.delete-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: var(--delete-icon-color);
+  transition: color 0.2s ease-in-out;
+}
+
+.delete-icon:hover {
+  color: #c82333;
+}

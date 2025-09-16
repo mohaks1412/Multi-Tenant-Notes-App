@@ -1,0 +1,56 @@
+.nothing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.eyes {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.eye {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border: 4px solid black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.pupil {
+  width: 20px;
+  height: 20px;
+  background: black;
+  border-radius: 50%;
+  animation: blink 3s infinite;
+}
+
+@keyframes blink {
+  0%, 90%, 100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+}
+
+.message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #19916b;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

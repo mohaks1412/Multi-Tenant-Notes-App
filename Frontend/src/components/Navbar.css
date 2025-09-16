@@ -1,0 +1,110 @@
+/* Navbar.css */
+
+:root {
+  --navbar-bg: #2c3036;
+  --text-color: #f8f9fa;
+  --primary-color: #20c997;
+  --hover-color: #1a9e7d;
+}
+
+.navbar {
+  background-color: var(--navbar-bg);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.brand {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin: 0 1.5rem 0 0;
+  font-weight: bold;
+}
+
+.navlink {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.navlink:hover {
+  color: var(--primary-color);
+}
+
+.navlink.active {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.user-info {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  margin-right: 1.5rem;
+  opacity: 0.8;
+}
+
+.logout-btn {
+  background-color: var(--primary-color);
+  color: var(--navbar-bg);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: var(--hover-color);
+}
+
+/* -------------------- */
+/* --- Responsiveness --- */
+/* -------------------- */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar-left {
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+  }
+
+  .brand {
+    margin: 0 auto; /* Center the brand on small screens */
+  }
+
+  .navbar-right {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .user-info {
+    margin-right: 0.5rem; /* Adjust margin for smaller screens */
+  }
+
+  .logout-btn {
+    width: auto;
+  }
+}
